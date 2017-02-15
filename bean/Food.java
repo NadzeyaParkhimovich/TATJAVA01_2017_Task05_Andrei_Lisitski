@@ -1,23 +1,23 @@
 package com.epam.bean;
 public class Food {
-
+	
+	private String menuType;
 	private String name;
 	private String consist;
 	private String weight;
 	private int price;
-	private int id;	
-
-	public Food(String name, String consist, String weight, int price) {
-
-		this.name = name;
-		this.consist = consist;
-		this.weight = weight;
-		this.price = price;
-	}
+	private int id;		
 	
 	public Food() {		
 	}
+	
+	public String getMenuType() {
+		return menuType;
+	}
 
+	public void setMenuType(String menuType) {
+		this.menuType = menuType;
+	}
 	public String getName() {
 		return name;
 	}

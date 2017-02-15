@@ -1,16 +1,17 @@
 package com.epam.sax;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
+import org.xml.sax.SAXParseException;
 import org.xml.sax.helpers.DefaultHandler;
 
 import com.epam.bean.Food;
 import com.epam.bean.MenuTagName;
 
-
-public class SaxParser extends DefaultHandler {
+public class MenuSaxHandler extends DefaultHandler {
 
 	private List<Food> foodList = new ArrayList<>();
 	private Food food;
@@ -48,9 +49,11 @@ public class SaxParser extends DefaultHandler {
 	public void endElement(String url, String localName, String qName)
 			throws SAXException {
 		MenuTagName tagName = MenuTagName.valueOf(qName.toUpperCase());
-		
+
 		switch (tagName) {
-		
+		case MENU_TYPE:
+			food.setMenuType(text.toString());
+			break;
 		case NAME:
 			food.setName(text.toString());
 			break;
@@ -63,8 +66,27 @@ public class SaxParser extends DefaultHandler {
 		case RRICE:
 			food.setPrice(Integer.parseInt(text.toString()));
 			break;
+		case DISH:
+			foodList.add(food);
+			food = null;
+			break;
 		}
+	}
 
+	public void warning(SAXParseException exception) {
+		System.err.println("WARNING: line " + exception.getLineNumber() + ": "
+				+ exception.getMessage());
+	}
+
+	public void error(SAXParseException exception) {
+		System.err.println("ERROR: line " + exception.getLineNumber() + ": "
+				+ exception.getMessage());
+	}
+
+	public void fatalError(SAXParseException exception) throws SAXException {
+		System.err.println("FATAL: line " + exception.getLineNumber() + ": "
+				+ exception.getMessage());
+		throw (exception);
 	}
 
 }
