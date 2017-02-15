@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="http://www.epam.task5.org"
+	xmlns:tns="http://www.epam.task5.org" 
+	elementFormDefault="unqualified">
+
+	<element name="menu">
+		<complexType>
+			<sequence>
+				<element name="dish" type="tns:food-type" minOccurs="1"
+					maxOccurs="unbounded" />
+			</sequence>
+		</complexType>
+	</element>
+
+	<simpleType name="menu-type">
+		<restriction base="string">
+			<enumeration value="cold-snack" />
+			<enumeration value="hot-snack" />
+			<enumeration value="breakfast" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="weight-type">
+		<restriction base="positiveInteger">
+			<minInclusive value="1" />
+			<pattern value="[0-9]" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="price-type">
+		<restriction base="positiveInteger">
+			<minInclusive value="1" />
+			<pattern value="[0-9]" />
+		</restriction>
+	</simpleType>
+
+	<complexType name="food-type">
+		<sequence>
+			<element name="meal" type="tns:menu-type" />
+			<element name="name" type="string" />
+			<element name="consist" type="string" />
+			<element name="weight" type="tns:weight-type" />
+			<element name="price" type="tns:price-type" />
+		</sequence>
+		<attribute name="id" type="integer" />
+	</complexType>
+
+</schema>
+

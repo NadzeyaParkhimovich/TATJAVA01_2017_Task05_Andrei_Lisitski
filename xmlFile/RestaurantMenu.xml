@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<menu xmlns="http://www.epam.task5.org"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.epam.task5.org/Menu Menu.xsd">
+
+	<dish id="1">
+		<menu-type>cold-snack</menu-type>
+		<name>Ассорти рыбное</name>
+		<consist>Слабосоленая форель, семга</consist>
+		<weight>100/20/15</weight>
+		<price>100</price>
+	</dish>
+
+	<dish id="2">
+		<menu-type>cold-snack</menu-type>
+		<name>Тарталетки с красной икрой</name>
+		<consist>Тарталетки с красной икрой</consist>
+		<weight>60/50</weight>
+		<price>150</price>
+	</dish>
+
+</menu>
+		
