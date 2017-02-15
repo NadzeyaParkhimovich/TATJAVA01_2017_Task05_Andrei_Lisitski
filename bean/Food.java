@@ -1,3 +1,4 @@
+package com.epam.bean;
 public class Food {
 
 	private String name;

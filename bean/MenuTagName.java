@@ -1,3 +1,4 @@
+package com.epam.bean;
 
 public enum MenuTagName {
 

@@ -1,9 +1,14 @@
+package com.epam.sax;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
+
+import com.epam.bean.Food;
+import com.epam.bean.MenuTagName;
+
 
 public class SaxParser extends DefaultHandler {
 
