@@ -14,11 +14,11 @@ targetNamespace="http://www.epam.task5.org"
 		</complexType>
 	</element>
 
-	<simpleType name="menu-type">
+	<simpleType name="category">
 		<restriction base="string">
-			<enumeration value="cold-snack" />
-			<enumeration value="hot-snack" />
-			<enumeration value="breakfast" />
+			<enumeration value="Холодные закуски" />
+			<enumeration value="Горячие закуски" />
+			<enumeration value="Завтрак" />
 		</restriction>
 	</simpleType>
 
@@ -38,7 +38,7 @@ targetNamespace="http://www.epam.task5.org"
 
 	<complexType name="food-type">
 		<sequence>
-			<element name="meal" type="tns:menu-type" />
+			<element name="meal" type="tns:category" />
 			<element name="name" type="string" />
 			<element name="consist" type="string" />
 			<element name="weight" type="tns:weight-type" />

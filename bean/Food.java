@@ -1,7 +1,7 @@
 package com.epam.bean;
 public class Food {
 	
-	private String menuType;
+	private String category;
 	private String name;
 	private String consist;
 	private String weight;
@@ -11,13 +11,17 @@ public class Food {
 	public Food() {		
 	}
 	
-	public String getMenuType() {
-		return menuType;
+	
+	public String getCategory() {
+		return category;
 	}
 
-	public void setMenuType(String menuType) {
-		this.menuType = menuType;
+
+	public void setCategory(String category) {
+		this.category = category;
 	}
+
+
 	public String getName() {
 		return name;
 	}

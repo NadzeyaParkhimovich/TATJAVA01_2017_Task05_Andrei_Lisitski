@@ -5,7 +5,7 @@
 	xsi:schemaLocation="http://www.epam.task5.org/Menu Menu.xsd">
 
 	<dish id="1">
-		<menu-type>cold-snack</menu-type>
+		<category>Холодные закуски</category>
 		<name>Ассорти рыбное</name>
 		<consist>Слабосоленая форель, семга</consist>
 		<weight>100/20/15</weight>
@@ -13,7 +13,7 @@
 	</dish>
 
 	<dish id="2">
-		<menu-type>cold-snack</menu-type>
+		<category>Холодные закуски</category>
 		<name>Тарталетки с красной икрой</name>
 		<consist>Тарталетки с красной икрой</consist>
 		<weight>60/50</weight>

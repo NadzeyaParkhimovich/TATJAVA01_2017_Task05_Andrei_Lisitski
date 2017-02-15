@@ -48,11 +48,12 @@ public class MenuSaxHandler extends DefaultHandler {
 
 	public void endElement(String url, String localName, String qName)
 			throws SAXException {
-		MenuTagName tagName = MenuTagName.valueOf(qName.toUpperCase());
+		MenuTagName tagName = MenuTagName.valueOf(qName.toUpperCase().replace("-", "_"));
 
 		switch (tagName) {
-		case MENU_TYPE:
-			food.setMenuType(text.toString());
+		
+		case CATEGORY:
+			food.setCategory(text.toString());
 			break;
 		case NAME:
 			food.setName(text.toString());
@@ -65,7 +66,7 @@ public class MenuSaxHandler extends DefaultHandler {
 			break;
 		case RRICE:
 			food.setPrice(Integer.parseInt(text.toString()));
-			break;
+			break;		
 		case DISH:
 			foodList.add(food);
 			food = null;
