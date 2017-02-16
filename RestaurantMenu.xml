@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<menu xmlns="http://www.epam.task5.org"
+<menu xmlns="http://www.epam.task5.org/Menu"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.epam.task5.org/Menu Menu.xsd">
 
@@ -8,17 +8,16 @@
 		<category>Холодные закуски</category>
 		<name>Ассорти рыбное</name>
 		<consist>Слабосоленая форель, семга</consist>
-		<weight>100/20/15</weight>
-		<price>100</price>
+		<weight>5</weight>
+		<price>6</price>
 	</dish>
 
 	<dish id="2">
 		<category>Холодные закуски</category>
 		<name>Тарталетки с красной икрой</name>
 		<consist>Тарталетки с красной икрой</consist>
-		<weight>60/50</weight>
-		<price>150</price>
+		<weight>2</weight>
+		<price>1</price>
 	</dish>
 
-</menu>
-		
+</menu>	
